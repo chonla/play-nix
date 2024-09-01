@@ -1,4 +1,4 @@
-## Start using nix with Flakes
+# Start using nix with Flakes
 
 1. Create a new `flake.nix`, using command `nix flake init`. A new `flake.nix` will be created with the following content.
 
