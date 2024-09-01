@@ -16,5 +16,6 @@ I know nix when I was in a class of LeSS in Action 2024, Bangkok. I think it sho
 * [Install nix](./install_nix.md)
 * [Enable flake](./enable_flake.md)
 * [Create flake](./create_flake.md)
+* [Nix development shell with flake](./nix_dev_with_flake.md)
 
 These steps are good enough version of use for me. Hope this help you too.
