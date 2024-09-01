@@ -1,6 +1,6 @@
 # Play nix
 
-I am playing [nix](https://nixos.org/).
+I am playing [nix](https://nixos.org/). This is the simple steps using nix.
 
 ## Environment
 
@@ -16,3 +16,5 @@ I know nix when I was in a class of LeSS in Action 2024, Bangkok. I think it sho
 * [Install nix](./install_nix.md)
 * [Enable flake](./enable_flake.md)
 * [Create flake](./create_flake.md)
+
+These steps are good enough version of use for me. Hope this help you too.
