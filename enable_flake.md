@@ -1,4 +1,12 @@
-# Enable flake
+# Enable Flakes
+
+Create file `~/.config/nix/nix.conf` with this content.
+
+```
+experimental-features = nix-command flakes
+```
+
+## Hook Flakes
 
 I use `direnv` to enable flake by creating a file `.envrc` with this content in my project directory.
 
