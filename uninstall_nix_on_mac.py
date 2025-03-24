@@ -19,6 +19,7 @@ def remove_nix_block_from_profile(profile_name):
                 removing = False
     os.rename(profile_name, f"{profile_name}.before_restore")
     os.rename(f"{profile_name}.after_restored", profile_name)
+    os.remove(f"{profile_name}.backup-before-nix")
 
 def remove_daemon(daemon_file):
     print (f"Removing daemon {daemon_file} ...")
