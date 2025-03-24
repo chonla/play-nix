@@ -62,12 +62,16 @@ def remove_fstab():
     os.rename("/etc/fstab", f"/etc/fstab.before_restore")
     os.rename(f"/etc/fstab.after_restored", "/etc/fstab")
     
-    with open("/etc/synthetic.conf", "r") as r, open(f"/etc/synthetic.conf.after_restored", "w") as w:
-        for line in r:
-            if line != "nix":
-                w.write(line)
-    os.rename("/etc/synthetic.conf", f"/etc/synthetic.conf.before_restore")
-    os.rename(f"/etc/synthetic.conf.after_restored", "/etc/synthetic.conf")
+    if os.path.exists("/etc/synthetic.conf"):
+        print ("Restoring /etc/synthetic.conf ...")
+        with open("/etc/synthetic.conf", "r") as r, open(f"/etc/synthetic.conf.after_restored", "w") as w:
+            for line in r:
+                if line != "nix":
+                    w.write(line)
+        os.rename("/etc/synthetic.conf", f"/etc/synthetic.conf.before_restore")
+        os.rename(f"/etc/synthetic.conf.after_restored", "/etc/synthetic.conf")
+    else:
+        print ("/etc/synthetic.conf is missing ... skipped")
     
 def remove_profiles():
     profiles = [
